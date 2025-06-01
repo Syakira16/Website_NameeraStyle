@@ -1,0 +1,208 @@
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+    nav {
+      background-color: #333;
+      padding: 10px 20px;
+    }
+
+    nav .navbar-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* Brand/logo */
+    .brand {
+      color: white;
+      font-family: 'Poppins', sans-serif;
+      font-size: 20px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* Menu */
+    nav ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav li {
+      margin-left: 20px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    /* Dropdown bahasa */
+    nav select {
+      background-color: #444;
+      color: white;
+      padding: 5px 10px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    .main-section{
+        margin: 0;
+        padding: 0;
+        background-image: url('img/kayla.jpeg'); 
+        background-size: cover;      
+        background-position: center; 
+        background-repeat: no-repeat;
+        height: 100vh;               
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .search-box button {
+        background-color: #555;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        color: white;
+        padding: 6px 12px;
+        border-radius: 6px; /* Sudut membulat tapi tetap rectangle */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .search-box input {
+      border: none;
+      outline: none;
+      padding: 5px;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .search-box button {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .section-title{
+        text-align: center;
+        font-size: 24px;
+        color: #333;
+        padding: 10px;
+        margin: 10px 0;
+        background: white;
+    }
+
+    .category .catalog-series{
+        display : flex;
+        align-items: center;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+        padding: 2rem 0;
+        padding-bottom: 3rem;
+    }
+  
+    .category .catalog-series .collection-content{
+        flex: 1 1 30rem;
+        box-shadow: 8px 8px rgba(0, 0, 0, .1);
+        border-radius: 10px;
+        border:.1rem rgba(0, 0, 0, .1);
+        position: relative;
+    }
+
+    .category .catalog-series .collection-content .image{
+        position: relative;
+        text-align: center;
+        padding-top: 2rem;
+        overflow: hidden;
+    }  
+    
+    .category .catalog-series .collection-content .image img{
+        height: 25rem;
+    }
+
+    .category .catalog-series .collection-content:hover .image img{
+        transform: scale(1.1);
+    }
+
+    .category .catalog-series .collection-content .image .icons{
+        position: absolute;
+        bottom: -7rem; 
+        left: 0;
+        right: 0;
+        display: flex;
+    }
+
+    .category .catalog-series .collection-content:hover .image .icons{
+        bottom:0;
+    }
+
+    .category .catalog-series .collection-content .image .icons a{
+        height: 5rem;
+        line-height: 5rem;
+        font-size: 2rem;
+        width: 50%;
+        background: #555;
+        color: white;
+    }
+
+     .category .catalog-series .collection-content .image .icons .cart-btn{
+        border-left: .1rem solid #333;
+        border-right: .1rem solid #333;
+        width: 100%;
+     }
+
+     .category .catalog-series .collection-content .image .icons a:hover{
+        background: #333;
+     }   
+
+     .category .catalog-series .collection-content .content{
+        padding: 2rem;
+        text-align: center;
+     }
+
+     .category .catalog-series .collection-content .content h3{
+        font-size: 2.5rem;
+        color:white ;
+     }
+
+     .category .catalog-series .collection-content .content .price{
+        font-size: 2.5rem;
+        color: #333;
+        font-weight: bolder;
+        padding-top: 1rem;
+     }
+
+
+
+    /* Optional: responsive tweak */
+    @media (max-width: 600px) {
+      nav .navbar-container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav ul {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      nav li {
+        margin: 10px 0;
+      }
+
+      .search-box {
+        width: 100%;
+        margin-top: 10px;
+      }
+
+      .search-box input {
+        width: 100%;
+      }
+    }
