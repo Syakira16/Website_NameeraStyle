@@ -1,5 +1,11 @@
 body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
   font-family: 'Poppins', sans-serif;
+  list-style: none;
+  text-decoration: none;
 }
 
     nav {
@@ -52,134 +58,290 @@ body {
       font-size: 16px;
     }
 
-    .main-section{
-        margin: 0;
-        padding: 0;
-        background-image: url('img/kayla.jpeg'); 
-        background-size: cover;      
-        background-position: center; 
-        background-repeat: no-repeat;
-        height: 100vh;               
-        font-family: 'Poppins', sans-serif;
-    }
-
-    .search-box button {
-        background-color: #555;
-        border: none;
-        cursor: pointer;
-        font-size: 16px;
-        color: white;
-        padding: 6px 12px;
-        border-radius: 6px; /* Sudut membulat tapi tetap rectangle */
+    .nav-icon{
         display: flex;
         align-items: center;
-        justify-content: center;
     }
 
-    .search-box input {
-      border: none;
-      outline: none;
-      padding: 5px;
-      font-family: 'Inter', sans-serif;
-    }
-
-    .search-box button {
-      background-color: transparent;
-      border: none;
-      cursor: pointer;
-      font-size: 16px;
-    }
-
-    .section-title{
-        text-align: center;
-        font-size: 24px;
-        color: #333;
-        padding: 10px;
-        margin: 10px 0;
-        background: white;
-    }
-
-    .category .catalog-series{
-        display : flex;
-        align-items: center;
-        gap: 1.5rem;
-        flex-wrap: wrap;
-        padding: 2rem 0;
-        padding-bottom: 3rem;
-    }
-  
-    .category .catalog-series .collection-content{
-        flex: 1 1 30rem;
-        box-shadow: 8px 8px rgba(0, 0, 0, .1);
-        border-radius: 10px;
-        border:.1rem rgba(0, 0, 0, .1);
-        position: relative;
-    }
-
-    .category .catalog-series .collection-content .image{
-        position: relative;
-        text-align: center;
-        padding-top: 2rem;
-        overflow: hidden;
-    }  
-    
-    .category .catalog-series .collection-content .image img{
-        height: 25rem;
-    }
-
-    .category .catalog-series .collection-content:hover .image img{
-        transform: scale(1.1);
-    }
-
-    .category .catalog-series .collection-content .image .icons{
-        position: absolute;
-        bottom: -7rem; 
-        left: 0;
-        right: 0;
-        display: flex;
-    }
-
-    .category .catalog-series .collection-content:hover .image .icons{
-        bottom:0;
-    }
-
-    .category .catalog-series .collection-content .image .icons a{
-        height: 5rem;
-        line-height: 5rem;
-        font-size: 2rem;
-        width: 50%;
-        background: #555;
+    .nav-icon i{
+        margin-right: 20px;
         color: white;
+        font-size: 25px;
+        font-weight: 300;
+        transition: all .42s ease;
     }
 
-     .category .catalog-series .collection-content .image .icons .cart-btn{
-        border-left: .1rem solid #333;
-        border-right: .1rem solid #333;
-        width: 100%;
-     }
+/* Main Section */
+.main-section {
+  background-image: url('img/kayla.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-     .category .catalog-series .collection-content .image .icons a:hover{
-        background: #333;
-     }   
+.section-title {
+    text-align: center;
+    font-size: 24px;
+    color: white;       /* Warna tulisan */
+    padding: 10px;
+    margin: 10px 0;
+    background: #333;  /* Jadi gak ada warna kotak */
+}
 
-     .category .catalog-series .collection-content .content{
-        padding: 2rem;
-        text-align: center;
-     }
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  gap: 20px;
+}
 
-     .category .catalog-series .collection-content .content h3{
-        font-size: 2.5rem;
-        color:white ;
-     }
+.left-side {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
 
-     .category .catalog-series .collection-content .content .price{
-        font-size: 2.5rem;
-        color: #333;
-        font-weight: bolder;
-        padding-top: 1rem;
-     }
+.section-explore {
+  margin: 0; 
+  margin-left: 80px;
+  font-size: 2.5rem;
+  color: black;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.section-details {
+  max-width: 400px;
+  color: black;
+  font-size: 1rem;
+  margin: 0;
+  margin-left: 50px;  /* <-- ini bagian gesernya */
+}
+
+.section-content {
+  max-width: 800px;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  color: white;
+}
+
+.search-box {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.search-box input {
+  padding: 0.7rem 1rem;
+  border: none;
+  border-radius: 4px 0 0 4px; /* sudut agak tumpul, bentuk rectangle */
+  width: 60%;
+  font-family: 'Poppins', sans-serif;
+}
+
+.search-box button {
+  padding: 0.7rem 1rem;
+  background-color: white;
+  color: #333;
+  border: none;
+  border-radius: 0 4px 4px 0; /* sudut agak tumpul, bentuk rectangle */
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+h1 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2.8rem;
+    }
+
+    .review-card {
+      background-color: #444;
+      border-radius: 10px;
+      padding: 20px 25px;
+      margin-bottom: 25px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+      transition: background-color 0.3s ease;
+    }
+
+    .review-card:hover {
+      background-color: #555;
+    }
+
+    .reviewer-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+      color: #ffd700; /* gold */
+    }
+
+    .review-date {
+      font-size: 0.9rem;
+      color: #ccc;
+      margin-bottom: 15px;
+    }
+
+    .review-text {
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #eee;
+    }
 
 
+/* Title, subtitle, description */
+.title {
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: #ddd;
+  margin-bottom: 1rem;
+}
+
+.description {
+  font-size: 1rem;
+  color: #eee;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.button {
+  padding: 0.75rem 1.5rem;
+  border: 2px solid white;
+  background: transparent;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: 0.3s ease;
+}
+
+.button:hover {
+  background-color: white;
+  color: black;
+}
+
+ .category .catalog-series {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 kolom tetap */
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 0 3rem;
+    box-sizing: border-box;
+}
+
+.category .catalog-series .collection-content {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* pastikan tingginya fleksibel */
+}
+
+.collection-content .image {
+    width: 100%;
+    height: 250px; /* tinggi tetap agar semua gambar sejajar */
+    overflow: hidden;
+    position: relative;
+}
+
+.collection-content .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* agar gambar tidak gepeng atau terpotong aneh */
+    transition: transform 0.3s ease;
+}
+
+.collection-content:hover .image img {
+    transform: scale(1.05);
+}
+
+.collection-content .image .icons {
+    position: absolute;
+    bottom: -5rem;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    transition: bottom 0.3s ease;
+}
+
+.collection-content:hover .image .icons {
+    bottom: 1rem;
+}
+
+.collection-content .image .icons a {
+    background: #555;
+    color: white;
+    font-size: 1rem;
+    padding: 0.4rem 0.6rem;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.collection-content .image .icons .cart-btn {
+    font-size: 0.85rem;
+    padding: 0.3rem 0.6rem;
+}
+
+.collection-content .image .icons a:hover {
+    background: #333;
+}
+
+.collection-content .content {
+    padding: 1rem;
+    text-align: center;
+}
+
+.collection-content .content h3 {
+    font-size: 1.1rem;
+    color: #222;
+    margin-bottom: 0.5rem;
+}
+
+.collection-content .content .price {
+    font-size: 1rem;
+    color: #888;
+    font-weight: bold;
+}
+
+.testimonials-section{
+    padding: 50px 0 100px;
+    background: white;
+}
+
+.testimonials-section .testimonial {    
+    display: flex;
+    padding: 35px;
+    object-fit: cover;
+    margin-bottom: 50px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.testimonials-section .testimonial .name {
+    margin-bottom: 16px;
+    font-size: 24px;
+}        
 
     /* Optional: responsive tweak */
     @media (max-width: 600px) {
